@@ -15,7 +15,7 @@ class Editora(models.Model):
 
 class Autor(models.Model):
     nome = models.CharField(max_length=255)
-    email = models.EmailField()
+    email = models.EmailField(null = True, blank = True)
 
     def __str__(self):
         return self.nome
@@ -29,6 +29,7 @@ class Livro(models.Model):
     isbn = models.CharField(max_length=32, null=True, blank=True)
     quantidade = models.IntegerField()
     preco = models.DecimalField(max_digits=7, decimal_places=2)
+    autores = models.ManyToManyField(Autor, related_name="livros")
     categoria = models.ForeignKey(
         Categoria, on_delete=models.PROTECT, related_name="livros"
     )
@@ -38,7 +39,6 @@ class Livro(models.Model):
     
 
     
-
     def __str__(self):
         return f'{self.titulo} ({self.quantidade})'
 
