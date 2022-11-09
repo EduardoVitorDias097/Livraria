@@ -13,3 +13,4 @@ setuptools==65.5.0 ; python_version >= "3.8" and python_version < "4.0"
 sqlparse==0.4.2 ; python_version >= "3.8" and python_version < "4.0"
 tzdata==2022.2 ; python_version >= "3.8" and python_version < "4.0" and sys_platform == "win32"
 whitenoise==6.2.0 ; python_version >= "3.8" and python_version < "4.0"
+poetry export --without-hashes > requirements.txt
