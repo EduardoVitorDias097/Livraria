@@ -20,18 +20,18 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
     "corsheaders",
     "rest_framework",
-    "uploader",
-    'core',
     "rest_framework_simplejwt",
-    "drf_spectacular"
+    "drf_spectacular",
+    "uploader",
+    "core",
 ]
 
 MIDDLEWARE = [
@@ -134,7 +134,7 @@ REST_FRAMEWORK = {
     "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
 
-    "DEFAULT_SCHEMA_CLASS":"drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     
 }
 
